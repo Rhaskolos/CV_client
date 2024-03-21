@@ -1,0 +1,10 @@
+
+
+.page {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 803px;
+    height: 1132px;
+    margin: 10px;   
+}

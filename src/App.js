@@ -1,11 +1,14 @@
-
+import React from "react";
+import "./css/app.css";
+import Page from "./component/Page";
 
 function App() {
-    return(
-<div>
-    <p>Hello World ! </p>
-</div>
-    )
-}
+    return (
+        <div className="div_principal">
+<Page />
+        </div>
 
+    )
+
+}
 export default App;
