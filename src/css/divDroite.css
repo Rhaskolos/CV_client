@@ -1,12 +1,14 @@
 .div_droite 
 {
     background-color: rgb(217, 224, 226);
-    width: 597px;
-    height: 1128px;
+    width: 567px;
+    height: 1416px;
     margin:0px;
 }
 
 .titre_principal 
 {
     white-space: pre-wrap; /* permet que le html reconnaisse les espaces et retour à la ligne lorsque l'on arrive à la bordure du conteneur */
+    text-align: center;
+    margin-top:10px;
 }
