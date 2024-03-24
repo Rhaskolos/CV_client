@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+
+data/donneesCvFr.json
+data/donneesCvEn.json
