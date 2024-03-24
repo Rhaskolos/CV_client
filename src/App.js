@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import "./css/app.css";
 import { useGlobalState } from "./globalStates";
 import Page from "./component/Page";
@@ -11,6 +11,7 @@ function App() {
     useEffect(() => {
 
         loadData();
+
     }, [globalStates.currentLanguage]);
 
 
