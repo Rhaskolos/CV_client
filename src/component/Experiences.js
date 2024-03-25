@@ -1,16 +1,33 @@
 import "../css/experiences.css";
 import React from "react";
+import { useGlobalState } from "../globalStates";
 
 function Experiences()
 {
+
+    const { globalStates } = useGlobalState();
+
+    if (!globalStates.currentCv || !globalStates.currentCv.div) {
+        return <div>Chargement...</div>;  
+    }
+
+    const {
+        titre_grande_section   
+    } = globalStates.currentCv.div[0].grande_section[1];
+
+    const {
+titre_petite_section,
+donnees
+    } = globalStates.currentCv.div[0].grande_section[1].petite_section[0];
+
+
     return(
         <div>
-        <h2>Expériences professionnelles :</h2>
+        <h2>{titre_grande_section} :</h2>
             <ul>
-                <li>2020-2022 :</li>
+                <li>{titre_petite_section} :</li>
             </ul>
-            <p>Animateur syndical de la Coordination Rurale pour l’animation des équipes
-                départementales de Champagne-Ardenne ainsi que pour la région Grand Est</p>
+            <p>{donnees[0]}</p>
         </div>
     )
 }

@@ -1,20 +1,29 @@
 import "../css/programmations.css";
 import React from "react";
+import { useGlobalState } from "../globalStates";
 
 function Programmations() 
 {
+
+    const { globalStates } = useGlobalState();
+
+    if (!globalStates.currentCv || !globalStates.currentCv.div) {
+        return <div>Chargement...</div>;  
+    }
+
+    const {
+        titre_petite_section,
+        donnees
+            } = globalStates.currentCv.div[1].grande_section[1].petite_section[0];
+
+
     return(
         <div>
-        <h3>Programmations :</h3>
+        <h3>{titre_petite_section} :</h3>
         <ul>
-            <li>PHP</li>
-            <li>PYTHON</li>
-            <li>SQL</li>
-            <li>JAVASCRIPT</li>
-            <li>REACT</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>R</li>
+            {donnees.map((value, index) => 
+            <li key={index}>{value}</li>
+            )}
         </ul>
     </div>
     );

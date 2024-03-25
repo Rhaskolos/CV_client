@@ -1,9 +1,9 @@
-import "../css/profil.css";
+import "../css/associatifs.css";
 import React from "react";
 import { useGlobalState } from "../globalStates";
 
-function Profil()
-{
+
+export default function Associatif() {
 
     const { globalStates } = useGlobalState();
 
@@ -14,18 +14,15 @@ function Profil()
     const {
         titre_petite_section,
         donnees
-            } = globalStates.currentCv.div[1].grande_section[0].petite_section[0];
+            } = globalStates.currentCv.div[1].grande_section[2].petite_section[0];
 
-    return(
+            return(
 <div>
-    <h2>{titre_petite_section}</h2>
-    <ul>
-        {donnees.map((value, index) =>
-        <li key={index}>{value}</li>
-        )}
-    </ul>
+    <h3>{titre_petite_section}</h3>
+    {donnees.map((value, index) => 
+    <li key={index}>{value}</li>
+    )}
 </div>
-    );
-}
+            )
 
-export default Profil;
+}

@@ -26,3 +26,4 @@ yarn-error.log*
 
 data/donneesCvFr.json
 data/donneesCvEn.json
+data/donneesCvEmoji.json

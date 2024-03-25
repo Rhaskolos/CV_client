@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import "./css/app.css";
 import { useGlobalState } from "./globalStates";
 import Page from "./component/Page";
+import SwitchLanguage from './component/SwitchLanguage';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
     return (
         
             <div className="div_principal">
+                <SwitchLanguage/>
                 <Page />
             </div>
         

@@ -6,6 +6,7 @@ const GlobalStateContext = createContext();
 export const GlobalStateProvider = ({children}) => {
 
     const [globalStates, setGlobalStates] = useState ({
+        availableLanguage: ["fr","en","emoji"],
         currentLanguage: "fr",
         currentCv: {}
     });
